@@ -1,0 +1,10 @@
+{
+  "id": 10,
+  "name": "Pedro Almeida",
+  "cidade": "Belo Horizonte",
+  "idade": "26",
+  "programmingLanguages": [
+    "Java Script",
+    "Python"
+  ]
+}
