@@ -13,7 +13,6 @@ const JSONWrite = (filePath, data, encoding = 'utf-8') => {
     return new Promise(promiseCallBack);
 };
 
-JSONWrite('./teste4.json', {id:2, name:'Pedro Resende de Almeida'}).then(console.log).catch(console.error);
 
 const JSONRead = (filePath, encoding = 'utf-8') => {
     const promiseCallBack = (resolve, reject) => {
@@ -33,7 +32,6 @@ const JSONRead = (filePath, encoding = 'utf-8') => {
     return new Promise(promiseCallBack);
 };
 
-JSONRead('./user.json').then(console.log).catch(console.error);
 
 const JSONUpdate = (filePath, newData, encoding = 'utf-8') => {
     const promiseCallBack = async (resolve, reject) => {
@@ -50,7 +48,6 @@ const JSONUpdate = (filePath, newData, encoding = 'utf-8') => {
     return new Promise(promiseCallBack);
 };
 
-JSONUpdate('./teste4.json', {id:1, name:'Pedro Resende de Almeida'}).then(console.log).catch(console.error);
 
 const JSONDelete = (filePath) => {
     const promiseCallBack = (resolve, reject) => {
@@ -65,8 +62,18 @@ const JSONDelete = (filePath) => {
     return new Promise(promiseCallBack);
 };
 
-JSONDelete('./teste3.json').then(console.log).catch(console.log);
 
+// JSONWrite('./teste4.json', {id:2, name:'Pedro Resende de Almeida'}).then(console.log).catch(console.error);
+// JSONRead('./user.json').then(console.log).catch(console.error);
+// JSONUpdate('./teste4.json', {id:1, name:'Pedro Resende de Almeida'}).then(console.log).catch(console.error);
+// JSONDelete('./teste3.json').then(console.log).catch(console.log);
+
+// Exports para importar em algum projeto
+// Apenas sendo necessario criar uma classe para utilização dos helpers
+
+module.exports = {JSONRead, JSONWrite, JSONUpdate, JSONDelete}
+
+// Conteúdo de Aprendizagem do Video
 
 // 1ª Forma
 // const user = require('./user.json');
